@@ -22,11 +22,18 @@ main {
   background-color: hsl(216, 50%, 16%);
   border-radius: 1rem;
   width: 95%;
+  box-shadow: 20px 20px 0px hsla(216, 50%, 8%, 0.2);
 }
 
 .main-img-cont {
   width: 85%;
   margin: 24px auto;
+  position: relative;
+}
+
+.main-img-cont:hover .view-img {
+  display: block;
+  background-color: hsla(178, 100%, 50%, 0.6);
 }
 
 .main-img {
@@ -34,6 +41,21 @@ main {
   margin: 0 auto;
   display: block;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.main-img-cont .view-img {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  padding: 41.5%;
+  border-radius: 0.5rem;
+}
+
+.main-img-cont:hover, .view-img {
+  display: block;
 }
 
 .text-cont-section {
@@ -45,17 +67,26 @@ h1 {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
   font-size: 1.3rem;
-  padding-bottom: 15px;
+  cursor: pointer;
+  width: 172px;
+  transition: all 0.4s ease-in-out;
+}
+
+h1:hover {
+  color: hsl(178, 100%, 50%);
 }
 
 .main-para {
   color: hsla(215, 51%, 70%, 0.75);
   font-weight: 300;
   line-height: 1.6rem;
+  padding-top: 15px;
 }
 
 .sub-paras-cont {
   display: flex;
+  border-bottom: solid 1px hsl(215, 32%, 27%);
+  padding: 10px 0;
 }
 
 .eth-p, .time-left-p {
@@ -63,11 +94,63 @@ h1 {
   width: 50%;
 }
 
+.eth-p {
+  justify-content: flex-start;
+  color: hsl(178, 100%, 50%);
+}
+
+.eth-p p, .time-left-p p {
+  padding-left: 5px;
+  font-size: 0.9rem;
+}
+
+.eth-p img, .time-left-p img {
+  object-fit: contain;
+}
+
+.time-left-p {
+  justify-content: flex-end;
+  color: hsla(215, 51%, 70%, 0.75);
+}
+
+.footer-cont {
+  display: flex;
+  padding: 15px 0;
+}
+
+.footer-cont img {
+  width: 36px;
+  border: solid 1px hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.creator-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  color: hsla(215, 51%, 70%, 0.75);
+  font-size: 0.9rem;
+}
+
+.creator-p span {
+  color: hsla(0, 0%, 100%, 0.9);
+  padding-left: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.creator-p span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
 .attribution { 
   font-size: 11px; text-align: center; 
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 5px;
 }
 
 .attribution a { 
-  color: hsl(228, 45%, 44%); 
+  color: hsl(178, 100%, 50%); 
 }
 
