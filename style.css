@@ -162,6 +162,7 @@ h1:hover {
   max-height: 80vh;
   max-width: 80vw;
   border-radius: 0.5rem;
+  z-index: 500;
 }
 
 .attribution { 
